@@ -1,0 +1,9 @@
+hotdogs <-read.csv("http://datasets.flowingdata.com/hot-dog-contest-winners.csv"
+(library("ggplot2"))
+ggplot(hotdogs, aes(Year, Dogs.eaten, 
+colour = New.record, fill = "darkblue")) +
+geom_line() +
+xlab ("Years") + ylab ("Hotdogs eaten") +
+ggtitle ("Hotdogs eaten over the years") +
+theme(panel.grid.major = element_line
+(color = "black", size = 5, linetype = 0))
