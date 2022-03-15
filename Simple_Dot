@@ -1,0 +1,3 @@
+plot(mtcars$cyl, (mtcars$hp), col="red", main = "Cylinders and Relation to Horspower", xlab = "Cylinders (4,6,8)", ylab = "Horsepower")
+
+grid(NULL,NULL, col = "gray")
