@@ -1,0 +1,9 @@
+read.csv("mtcars.csv")
+library(ggplot2)
+
+ggplot2(mtcars, aes (hp, mgp, colour = cyl, fill = "darkblue")) +
+    geom_point() +
+    xlab("Horsepower") + ylab("MPG (Miles per Gallon)") +
+    ggtitle ("MPG as a function of horsepower",)
+    theme(panel.grid.major = element_line
+    (color = "black", size = 0.1, linetype = 1))
