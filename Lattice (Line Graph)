@@ -1,0 +1,16 @@
+libary(lattice)
+x <- 1967:1977
+y<- C(0.5,1.8,4.6,5.3,5.3,5.7,5.5,5,5.5,6.5)
+xyplot(y~X, xlab = "", ylab = "", pch = 16, col = 1, border = "transparent", type = "o",
+    abline=list(h = c(max(y), max(y)-1), lty = 2), 
+    scales=list(x = list(at=x, labels = x, fontfamily = "serif", cex = 1),
+                y =list (at=seq(1,6,1),    fontfamily = "serif", cex = 1,
+                label =sprintf("$%s", seq(300,400,200)))),
+     par.settings =list(axis.line = list(col = "transparent"), dot.line = list(lwd=0)),
+     axis = function(side, line.col = "black", ...) {
+       if(side %in% c("left,"bottom")) {axis.defualt(side = side, line.col = "black", ...)}})
+ltext(current.panel.limits()$xlim[2]/1.1, adj = 1. fontfamily = "serif",
+      current.panel.limits()$ylim[1]/1.3, cex = 1,
+      "Per capita\nbudget expenditures\nin constant dollars")
+ltext(current.panel.limits()$xlim[2]/1.1, adj = 1, fontfamily = "serif",
+     (current.panel.limits()$ylim[1]/5.5, cex = 1, "5%"
